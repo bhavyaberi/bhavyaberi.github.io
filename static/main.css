@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Story+Script&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -76,6 +78,7 @@ body {
 
 .bg h1 {
   font-size: 5rem;
+  padding-left: 20px;
 }
 
 @keyframes changeBackground {
@@ -138,6 +141,7 @@ body {
   background-color: rgb(28, 12, 22);
   color: #fff;
   text-align: center;
+  padding-bottom: 15px;
 }
 
 /*Gallery on 1st page*/
@@ -155,7 +159,7 @@ body {
   font-size: clamp(32px, 6vw, 64px);
   font-weight: bolder;
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Indie Flower', cursive, "Knewave", "Story Script";
   letter-spacing: 2px;
   color: white;
 }
@@ -163,7 +167,7 @@ body {
 #gallery h1 {
   font-weight: bolder;
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Indie Flower', cursive, "Knewave", "Story Script";
   letter-spacing: 2px;
   color: white;
 }
@@ -242,7 +246,21 @@ button {
   margin-bottom: 18px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media screen and (max-width: 900px) and (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
   .nav-links {
     flex-direction: column;
     align-items: center;
@@ -250,25 +268,28 @@ button {
 
   .bg {
     height: 40vh;
-    padding: 20px;
   }
-}
 
-@media (max-width: 900px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
 /* Mobile */
-@media (max-width: 500px) {
+@media screen and (max-width: 576px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .gallery {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-}
 
-@media screen and (max-width: 1080px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
