@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  background-color: rgb(28, 12, 22);
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-bars {
+  display: flex;
+  height: 90px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+/*Background Image*/
+.bg {
+  margin-top: 40px;
+  height: 65vh;
+  width: 100%;
+  animation: changeBackground 15s infinite ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 4px 4px 6px rgba(255, 255, 255, 1);
+  margin-bottom: 50px;
+  font-family: 'Sacramento', cursive;
+}
+
+.bg h1 {
+  font-size: 5rem;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('/Art/1.webp');
+  }
+
+  20% {
+    background-image: url('/Art/3.jpg');
+  }
+
+  40% {
+    background-image: url('/Art/6.jpg');
+  }
+
+  60% {
+    background-image: url('/Art/4.avif');
+  }
+
+  80% {
+    background-image: url('/Art/5.avif');
+  }
+
+  100% {
+    background-image: url('/Art/1.webp');
+  }
+
+}
+
+
+/*Footer*/
+.footer {
+  background: rgb(28, 12, 22);
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-link {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.footer2 {
+  background-color: rgb(28, 12, 22);
+  color: #fff;
+  text-align: center;
+}
+
+/*Gallery on 1st page*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+#gallery h2 {
+  padding-top: 10px;
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 2px;
+  color: white;
+}
+
+#gallery h1 {
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.card {
+  background-color: rgb(21, 10, 17);
+  padding: 15px;
+  margin: 10px;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  font-size: larger;
+  box-shadow: rgba(255, 255, 255, 0.08) 0px 4px 16px;
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+
+.explore-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: rgb(75, 33, 56);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Hover effect */
+.explore-button:hover {
+  background-color: rgb(112, 66, 92);
+  border-color: #000;
+  transform: scale(1.1);
+}
+
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.about-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.about-container h1 {
+  font-size: 60px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+
+.about-content p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bg {
+    height: 40vh;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
